@@ -1,0 +1,182 @@
+body:not(.notme){
+  background: linear-gradient(#bbcbff, white 10%) no-repeat;
+  min-height: 100%;
+  margin: 0 !important; /* 여백 제거 */
+  padding: 0 !important; /* 여백 제거 */
+  overflow-x: hidden; /* 가로 스크롤 막기 */
+}/*모든 body태그에서 적용되는 문제있어서 수정하였습니다*/
+
+
+.login {
+  height: 44px;
+  width: 1189px;
+}
+
+
+#popup {
+  text-align: left;
+  left: 35%;
+  padding-right: 25px;
+  position: absolute;
+  width: 200px;
+  height: auto;
+
+  background-color: white;
+  border-radius: 15px;
+}
+
+#popup > ul li a{
+  text-decoration: none;
+}
+
+#popup > ul li a:link{
+  color: black;
+}
+
+#popup > ul li a:visited{
+  color: black;
+}
+
+
+.login > a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.login > a:link {
+  color: black;
+}
+
+.login > a:visited {
+  color: black;
+}
+
+.topbar > a img {
+  width: 134px;
+  height: 36px;
+}
+
+.topbar > a {
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin-right: 30px;
+  margin-left: 30px;
+  font-weight: bold;
+}
+
+.topbar > a:link {
+  color: black;
+}
+
+.topbar > a:visited {
+  color: black;
+}
+
+.topbar a:hover {
+  color: #225CFF;
+  transition: 0.2s;
+}
+
+
+.search > input {
+  width: 348px;
+  height: 24px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  /* border - 선 굵기 / 모양 / 색상 조정 
+  rgba 0,0,0,0 은 투명입니다~ */
+  border-radius: 20px;
+  /* 칸의 round값 조정 px값 올라갈수록 둥글어짐 */
+}
+
+.search > button {
+  /* width: 24px;
+  height: 24px; */
+  border-radius: 20px;
+  border: solid 1px rgba(0, 0, 0, 0);
+  background-color: white;
+  position: relative;
+  top: 7px;
+}
+
+.search > button img {
+  width: 24px;
+  height: 24px;
+  display: block;
+  margin: auto;
+}
+
+.ilust_main {
+  margin-top: 50px;
+  position: relative;
+  left: 270px;
+  z-index: -1;
+}
+
+.logo_main_right {
+  position: relative;
+  z-index: 1;
+  left: 150px;
+  top: -600px;
+}
+
+.bookrot {
+  display: inline;
+  position: relative;
+  z-index: 2;
+  right: 200px;
+  bottom: -50px;
+}
+
+.whyrefresh{
+  border: none;
+}
+
+.todaybest{
+  border: none;
+}
+
+.footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-right: 250px;
+  padding-left: 250px;
+  background: black;
+  width: 100%;
+  height: 200px;
+}
+
+.about{
+  margin-top: 70px;
+}
+
+.about > ul li{
+  display: inline;
+}
+
+.about > ul li a{
+  text-decoration: none;
+}
+
+.about > ul li a:link{
+  color: white;
+}
+
+.about > ul li a:visited{
+  color: white;
+}
+
+.copyright{
+  margin-top: 25px;
+}
+
+.copyright{
+  color: white;
+}
+
+.getapp{
+  position: relative;
+  top: -200px;
+  left: 55%;
+}

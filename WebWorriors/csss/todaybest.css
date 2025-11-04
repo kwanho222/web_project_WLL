@@ -1,0 +1,39 @@
+.rank{
+  padding-top: 20px;
+  padding-left: 0px;
+}
+
+.rank > li{
+  padding-bottom: 10px;
+}
+
+.num {
+  color: #225CFF;
+  font-weight: bold;
+}
+
+a{
+  font-size: 14px;
+}
+
+div{
+  display: inline-flex;
+}
+
+.title {
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.title:link{
+  color: black;
+}
+.title:visited{
+  color: black;
+}
+
+.writer{
+  right: 0px;
+  color: gray;
+}

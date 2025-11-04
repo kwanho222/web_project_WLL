@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WLSS 당신에게 필요한 서재</title>
+  <style type="text/css">@import url("../csss/main.css");</style>
+  <script src="../jss/main.js"></script>
+</head>
+<body>
+
+<!-- Login -->
+<div align="center">
+  <nav align="right" class="login">
+    <a href="./login.html">로그인</a>
+    <a href="./register.html">회원가입</a>
+  </nav>
+</div>
+
+<!-- Topbar -->
+<div align="center">
+  <nav class="topbar">
+    <a href="#"><img src="../img/logo.png" alt="logo"></a>
+    <a href="#" onclick="alert_noimplement()">eBook</a>
+    <a onmouseover="popup_best()" onmouseleave="closePopup()">베스트</a>
+    <div onmouseover="openPopup()" onmouseleave="closePopup()" id="popup">
+      <ul>
+        <li>
+          <a href="#" onclick="alert_noimplement()">국내도서</a>
+        </li>
+        <li>
+          <a href="#" onclick="alert_noimplement()">외국도서</a>
+        </li>
+        <li>
+          <a href="#" onclick="alert_noimplement()">eBook</a>
+        </li>
+      </ul>
+    </div>
+    <a href="login.html" onclick="mypage()">마이페이지</a>
+    <a href="servicecenter.html">고객센터</a>
+    <a class="search">
+      <input type="text" id="search" required placeholder="   찾고싶은 도서 이름을 검색해 보세요">
+      <button onclick="search(document.getElementById('search').value)"><img src="../img/search.png" alt="search"></button>
+    </a>
+  </nav>
+</div>
+
+
+
+<!-- 중앙 -->
+<section>
+  <!--메인 이미지-->
+  <img class="ilust_main" src="../img/ilust_main.png" alt="ilust_main">
+
+  <!--큰 로고-->
+  <img class="logo_main_right" src="../img/logo_main_right.png" alt="logo_main_right">
+
+  <!--책 로테이션-->
+  <div class="bookrot">
+    <iframe src="bookrot.html" width="350px" height="600px" frameborder="0">
+      iframe 태그 미지원 브라우저
+    </iframe>
+  </div>
+</section>
+<section style="margin-left: 250px; margin-top: 50px; margin-bottom: 50px">
+  <!--왜 새로고침인가요-->
+  <iframe class="whyrefresh" src="whyrefresh.html" width="800px" height="600px">
+    iframe 태그 미지원 브라우저
+  </iframe>
+  <!--오늘의 베스트 셀러-->
+  <iframe class="todaybest" src="todaybest.html" width="600px" height="600px">
+    iframe 태그 미지원 브라우저
+  </iframe>
+</section>
+
+
+<footer class="footer">
+  <ul>
+    <!--로고-->
+    <li>
+      <ul>
+        <li>
+          <div>
+            <img src="../img/logo.png" alt="logo">
+          </div>
+        </li>
+      </ul>
+    </li>
+    <!--about-->
+    <li>
+      <div class="about">
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Feature</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </li>
+    <!--copyright-->
+    <li>
+      <div class="copyright">
+        <ul type="none">
+          <li>
+            <a>&copy 2023 WLSS. All rights reserved</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+  <div class="getapp">
+    <ul type="none">
+      <p style="color: white">Get the App</p>
+      <li>
+        <a href="#">
+          <img src="../img/appstore.png" alt="appstore.png">
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="../img/googleplay.png" alt="googleplay">
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>
+<script>closePopup()</script>
+</body>
+</html>

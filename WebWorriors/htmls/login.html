@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <style type="text/css">@import url(../csss/login.css);</style>
+  <script src="../jss/main.js"></script>
+</head>
+<body>
+<header class="head">
+  <a href="../htmls/index.html">
+    <img src="../img/logo.png" alt="logo.png">
+  </a>
+</header>
+<section class="body">
+  <p class="title">로그인</p>
+  <hr>
+  <div class="inputs">
+    <p style="margin-right: 230px">아이디</p>
+    <p><input type="text" id="_id" class="input_id2" required placeholder="아이디"></p>
+    <p style="margin-right: 210px">비밀번호</p>
+    <p><input type="password" id="_pwd" class="input_pwd" required placeholder="비밀번호"></p>
+    <p style="margin-right: 170px"><input type="checkbox" style="width: 13px; height: 13px"> 아이디 저장</p>
+    <p><button onclick="login(document.getElementById('_id').value,
+                              document.getElementById('_pwd').value)"
+                              style="border-radius: 10px; color:white; border:none; background-color: blue; width: 280px; height: 40px">로그인</button></p>
+    <p class="find">
+      <a onclick="phonecheck()" href="#">아이디 찾기</a>
+      <a>/</a>
+      <a onclick="phonecheck()" href="#">비밀번호 재설정</a>
+      <a>/</a>
+      <a href="../htmls/register.html">회원가입</a>
+    </p>
+  </div>
+</section>
+</body>
+</html>

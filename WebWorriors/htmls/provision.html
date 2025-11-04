@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>provision</title>
+  <style type="text/css">@import url("../csss/provision.css");</style>
+  <script src="../jss/main.js"></script>
+</head>
+<body>
+<input id="all" onclick="agreeall(document.getElementById('all'),
+document.getElementById('item1'),
+document.getElementById('item2'),
+document.getElementById('item3'))" type="checkbox"><a>전체 동의</a>
+<hr>
+<input id="item1" onclick="allagreed(document.getElementById('all'),
+document.getElementById('item1'),
+document.getElementById('item2'),
+document.getElementById('item3'))" type="checkbox">
+<a href="#">(필수) 개인회원 약관에 동의</a>
+<br>
+<input id="item2" onclick="allagreed(document.getElementById('all'),
+document.getElementById('item1'),
+document.getElementById('item2'),
+document.getElementById('item3'))" type="checkbox">
+<a href="#">(필수) 개인정보 수집 및 이용에 동의</a>
+<br>
+<input id="item3" onclick="allagreed(document.getElementById('all'),
+document.getElementById('item1'),
+document.getElementById('item2'),
+document.getElementById('item3'))" type="checkbox">
+<a>(필수) 만 14세 이상입니다.</a>
+</body>
+</html>

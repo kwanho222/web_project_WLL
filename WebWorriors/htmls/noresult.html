@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>noresult</title>
+  <style type="text/css">@import url("../csss/main.css");</style>
+  <script src="../jss/main.js"></script>
+</head>
+<body>
+<!-- Login -->
+<div align="center">
+  <nav align="right" class="login">
+    <a href="./login.html">로그인</a>
+    <a href="./register.html">회원가입</a>
+  </nav>
+</div>
+
+<!-- Topbar -->
+<div align="center">
+  <nav class="topbar">
+    <a href="#"><img src="../img/logo.png" alt="logo"></a>
+    <a href="#" onclick="alert_noimplement()">eBook</a>
+    <a onmouseover="popup_best()" onmouseleave="closePopup()">베스트</a>
+    <div onmouseover="openPopup()" onmouseleave="closePopup()" id="popup">
+      <ul>
+        <li>
+          <a href="#" onclick="alert_noimplement()">국내도서</a>
+        </li>
+        <li>
+          <a href="#" onclick="alert_noimplement()">외국도서</a>
+        </li>
+        <li>
+          <a href="#" onclick="alert_noimplement()">eBook</a>
+        </li>
+      </ul>
+    </div>
+    <a href="login.html" onclick="mypage()">마이페이지</a>
+    <a href="servicecenter.html">고객센터</a>
+    <a class="search">
+      <input type="text" id="search" required placeholder="찾고싶은 도서 이름을 검색해 보세요">
+      <button onclick="search(document.getElementById('search').value)"><img src="../img/search.png" alt="search"></button>
+    </a>
+  </nav>
+</div>
+
+
+<div style="margin-left: 200px; margin-right: 200px">
+<h2 style="margin-top: 100px; margin-left: 20px">'<strong id="title">[검색어]</strong>'에 대한 검색 결과가 없습니다.</h2>
+  <br>
+<hr>
+  <br>
+<ul>
+  <li>
+    입력한 검색어의 철자 또는 띄어쓰기가 정확한지 다시 한번 확인해 주세요.
+  </li>
+  <li>
+    검색어의 단어 수를 줄이거나, 보다 일반적인 검색어를 사용하여 검색해 보세요.
+  </li>
+</ul>
+</div>
+<script>load()</script>
+<script>closePopup()</script>
+</body>
+</html>

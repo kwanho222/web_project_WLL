@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WISS</title>
+
+  <link rel="stylesheet" href="../csss/star.css">
+  <style type="text/css">@import url("../csss/main.css");</style>
+  <style type="text/css">@import url("../csss/details.css");</style>
+  <style type="text/css">
+    .partial {
+      height: 1883px; /* Set the initial height */
+      overflow: hidden; /* Hide the overflow */
+      position: relative; /* Enable relative positioning */
+    }
+
+    #imageContainer {
+      position: relative; /* Enable relative positioning for the container */
+    }
+
+    #imageContainer img {
+      width: 1139px; /* 이미지의 원래 가로 크기 */
+      height: 7789px; /* 이미지의 원래 세로 크기 */
+    }
+
+    #image-overlay {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: white;
+      font-size: 18px;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7); /* Add a text shadow for better visibility */
+      z-index: 1; /* Ensure the overlay is on top of the image */
+    }
+
+    #image-container-button {
+      width: 100%; /* Set the button width to 100% */
+    }
+
+    .modal {
+      display: none;
+      right: 0;
+      top: 50px;
+      width: 300px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      padding: 20px;
+      z-index: 1;
+      position: fixed; /* 팝업이 스크롤과 상관없이 고정되도록 수정 */
+    }
+
+  </style>
+  <script src="../jss/details.js"></script>
+    <script src="../jss/main.js"></script>
+  <script> /*책 표지 호버 효과*/
+    function changeImage() {
+      document.getElementById('bookImage').src = '../img/XLback.png'; // Replace 'otherImage.png' with the path to the new image
+    }
+
+    function restoreImage() {
+      document.getElementById('bookImage').src = '../img/XL.png'; // Restore the original image path
+    }
+  </script>
+</head>
+<body>
+<header>
+  <div align="center">
+    <nav align="right" class="login">
+      <a href="./login.html">로그인</a>
+      <a href="./register.html">회원가입</a>
+    </nav>
+  </div>
+
+  <!-- Topbar -->
+  <div align="center">
+    <nav class="topbar">
+      <a href="index.html"><img src="../img/logo.png" alt="logo"></a>
+      <a href="#" onclick="alert_noimplement()">eBook</a>
+      <a onmouseover="popup_best()" onmouseleave="closePopup_top()">베스트</a>
+      <div onmouseover="popup_best()" onmouseleave="closePopup_top()" id="popup" style="left: 30%;">
+        <ul>
+          <li>
+            <a href="#" onclick="alert_noimplement()">국내도서</a>
+          </li>
+          <li>
+            <a href="#" onclick="alert_noimplement()">외국도서</a>
+          </li>
+          <li>
+            <a href="#" onclick="alert_noimplement()">eBook</a>
+          </li>
+        </ul>
+      </div>
+      <a href="login.html" onclick="mypage()">마이페이지</a>
+      <a href="servicecenter.html">고객센터</a>
+      <a class="search">
+        <input type="text" id="search" required placeholder="찾고싶은 도서 이름을 검색해 보세요">
+        <button onclick="search(document.getElementById('search').value)"><img src="../img/search.png" alt="search">
+        </button>
+      </a>
+    </nav>
+  </div>
+</header>
+<div id='wrap'>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <section>
+    <p>
+      <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size="5">안드로이드 프로그래밍 with 자바</font><font
+        size="2"> - 단계별 예제로 배우는</font></strong>
+    </p>
+    <pre>
+        송미영(지은이) 길벗 캠퍼스 2023-06-30
+    </pre>
+    <div class="img" style="float:left;">
+      <img id="bookImage" src="../img/XL.png" width="565px" height="725.37px" onmouseover="changeImage()"
+           onmouseout="restoreImage()">
+    </div>
+    <div class="information" style="float:left; margin-left: 65px;">
+      <br>
+      <br>
+      <br>
+      <p>
+        <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;정가 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;36,000원</strong>
+      </p>
+      <br>
+
+      <p>
+        <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;판매가 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font
+          size="5" style="color:#EF528B;">34,400</font>원</strong>
+      </p>
+      <br>
+
+      <p>
+        <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;배송료 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;무료</strong>
+      </p>
+      <br>
+
+      <p>
+        <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;수령예상일&nbsp;&nbsp;</strong>
+        <button class="wlss_shipping">위즈 샛별배송</button>
+        <br>
+        <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;지금
+          택배로 주문하면 내일 아침 7시 <font style="color:#EF528B;">등교 전 배송</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*(노원구
+          공릉로 232) 기준
+      </p>
+
+      <form style="display: flex; align-items: center;">
+        <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;수량&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<input
+          type="number"
+          min="0" max="10"
+          id="quantity"
+          onchange="updateTotalPrice2()">
+          <span style="margin-left: 10px;"><strong>총 상품금액</strong> <span id="total-price"><font style="color:#EF528B;"> 0원</font></span></span></strong>
+      </form>
+      <p>
+        <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;무이자 할부</strong>
+        <button onclick="openPopup()">▼</button>
+
+        <!-- 무이자 할부 팝업 내용 -->
+      <div id="myModal" class="modal" style="top:200px;left:800px;">
+        <div class="modal-content">
+          <span class="close" onclick="closePopup()">&times;</span>
+          <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;무이자
+            할부 안내</strong>
+          <ul>
+            <li>2~3개월 무이자:신한,국민,현대,롯데,하나,삼성</li>
+            <li>2~4개월 무이자:농협</li>
+            <li>2~6개월 무이자:비씨,우리</li>
+            <br>
+            <li>제휴 신용카드 결제시 무이자+제휴카드 혜택 가능합니다.</li>
+            <li>알라딘페이는 토스페이먼츠사 정책으로 5만원 이상 할부 선택이<br>
+              가능하오니 필요시 다른 결제수단을 이용 부탁드립니다.
+            </li>
+            <li>오프라인결제/Non ActiveX 결제(간편결제)/카카오페이/<br>
+              네이버페이/페이코 등 간편결제/법인/체크/선불/키프트/<br>
+              문화누리/은행계열카드/알라딘 캐시와 같은 정기과금 결제<br>
+              등은 행사대상에서 제외됩니다
+            </li>
+            <li>무이자할부 결제 시 카드사 포인트 적립에서 제외될 수 있습니다.</li>
+            <li>본 행사는 카드사 사정에 따라 변경 또는 중단될 수 있습니다.</li>
+          </ul>
+        </div>
+      </div>
+      </p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button class="my_btn1">
+        무료배송
+      </button>
+      <button class="my_btn1">
+        소득공제
+      </button>
+      <br><br>
+      <div style="float:left; margin-left: 30px; text-align: left;">
+        <!-- 별점 선택 폼 -->
+        <img src="../img/score4.PNG">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size="5" style="color:#EF528B;">4.0</font><font size="3"> 리뷰(26)
+        한줄평(142)</font> |<font size="3"> 모바일 프로그래밍 주간 22위</font>
+
+      </div>
+      <br><br><br><br>
+
+      <div style="float:left; margin-left: 20px;">
+
+        <a href="./login.html">
+          <button class="my_btn2">장바구니 담기</button>
+        </a>
+        <a href="./login.html">
+          <button class="my_btn3">바로구매</button>
+        </a>
+        <button class="my_btn4" onclick="openGiftPopup()">선물하기</button>
+        <div id="giftModal" class="modal" style="top:600px;left: 1300px;">
+          <div class="modal-content">
+            <span class="close" onclick="closeGiftPopup()">&times;</span>
+            <br>
+            &nbsp;&nbsp;<a href="./login.html">
+            <button class="my_btn5" onclick="giftNow()"> 지금바로 선물하기</button>
+          </a>
+            <br>
+            &nbsp;&nbsp;<a href="./login.html">
+            <button class="my_btn5" onclick="addToCartAndGift()"> 장바구니 담기</button>
+          </a>
+          </div>
+        </div>
+
+        <button class="my_btn4">보관함+</button>
+      </div>
+
+
+    </div>
+  </section>
+  <section>
+    <div class="introduce" style="float:left">
+      <p>
+        <strong><font size="4">기본정보</font></strong>
+        <font size="2">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;672쪽
+          &nbsp;&nbsp;&nbsp;183*235mm&nbsp;&nbsp;1277g&nbsp;&nbsp;ISBN:9791140704842</font>
+      </p>
+      <div style="padding-left:140px;">
+        <ul>
+          <li>
+            국내도서 > 대학교재/전문서적 > 공학계열 > 컴퓨터공학 > 컴퓨터공학/전산학 개론
+          </li>
+          <li>
+            국내도서 > 컴퓨터/모바일 > 모바일 프로그래밍 > 안드로이드
+          </li>
+          <li>
+            국내도서 > 컴퓨터/모바일 > 프로그래밍 개발/방법론 > 애플/아이폰/안드로이드 프로그래밍
+          </li>
+        </ul>
+      </div>
+      <br><br>
+      <hr>
+      <p>
+        <strong><font size="4">책소개</font></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font
+        size="3">안드로이드의 기본 개념을 체계적으로 익히고,이를 실습 예제를 통해 익힌다.기본개념과 사용법을 스스로 실전에 적용하는 방법을 학습한 다음 실습 예제와 응용 예제를 통해 실전 프로젝트
+        응<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;용력을
+        키워보자</font>
+      </p>
+      <br><br>
+      <hr>
+      <p>
+        <strong><font size="4">저자 및</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font
+          size="3">송미영</font><br><font size="4">역자소개</font></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;웹
+        기반의 관공서 위기관리 시스템, 의학용어 온라인 평가 시스템, 중도 탈락 예방 시스템 개발, 앱 기반의 전자동화 및 교육용 게임 개발, 유니티를 이용<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;한
+        가상현실 콘텐츠 개발 등 다수의 실무 경험 및 자바, 웹 프로그래밍(JSP/PHP), 스프링, 안드로이드 프로그래밍, 유니티 엔진, VR/AR 프로그래밍 등의 강<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;의
+        경력을 가지고 있습니다.현재 수원여자대학교 교수로 재직하면서 컴퓨터 비전, 모바일 게임, 가상현실 등을 연구하고 있으며, 캡스톤 디자인 프로젝트나<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;경진대회,
+        공모전 등에서 학생들이 현장 실무 능력을 쌓을 수 있도록 도와주는 지도 교수로서 CATS(Computer Application Technology Study) 동아리를 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;운영
+        중입니다. 다년간의 현장 실무 개발과 교육 강의를 통해 얻은 지식을 독자에게 이해하기 쉽게 전하고자 집필에도 힘쓰고 있습니다.저서로는 『JAVA 마<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;스터』(한빛아카데미,
+        2023),『스프링 코딩 공작소』(길벗, 2022년), 『JSP 웹 프로그래밍』(한빛아카데미, 2018)이 있습니다
+      </p>
+      <br><br>
+      <hr>
+
+      <strong><font size="4">출판사 제공<br>책 소개</font></strong>
+      <div style="float:right">
+        <div id="image-overlay">
+
+        </div>
+        <div id="imageContainer" class="partial">
+          <img src="../img/423187811.jpg">
+        </div>
+      </div>
+      <button id="image-container-button" onclick="showImages()"
+              style="width: 1139px;height: 100px;margin-left: 160px; text-align: center;">상세정보 더보기 ▼
+      </button>
+      <div style="float:left; margin-left:20px; text-align: left;">
+        <!-- 별점 선택 폼 -->
+        <strong><font size="4px" class="flttop" style="color: #225CFF;"><br>한줄평&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></strong>
+
+        <form class="mb-3" name="myform" id="myform" method="post" style="display:inline-block;">
+          <fieldset style="float:left;">
+            <input type="radio" name="reviewStar" value="5" id="rate1"><label for="rate1">★</label>
+            <input type="radio" name="reviewStar" value="4" id="rate2"><label for="rate2">★</label>
+            <input type="radio" name="reviewStar" value="3" id="rate3"><label for="rate3">★</label>
+            <input type="radio" name="reviewStar" value="2" id="rate4"><label for="rate4">★</label>
+            <input type="radio" name="reviewStar" value="1" id="rate5"><label for="rate5">★</label>
+          </fieldset>
+
+
+        </form>
+        <br>
+        <textarea style="width: 981px;height: 100px;margin-left: 140px;float: left;"
+                  placeholder="한줄평을 남겨 주세요.배송 문의나 상품과 관련 없는 글은 상품 페이지에서 노출 제외 처리될 수 있습니다"></textarea>
+        <button class="my_btn6">등록</button>
+        <br>
+
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <hr style="width: 1139px; margin-left: 160px;">
+      <br>
+      <br>
+
+
+      <div style="float: left;margin-left: 160px; text-align: left;">
+        <img src="../img/score4.PNG">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이론 설명과 실습 예제에 대한 풀이가 상세한 좋은 책! 전공 수업 교재로 구매했지만
+        독학용으로도 추천합니다
+        <br>
+        <br>
+        <br>
+        <img src="../img/score5.PNG">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;위즈 샛별배송으로 구매해서 배송이 진짜 빨랐고 책도 잘 쓰고 있습니다!
+        <br>
+        <br>
+
+      </div>
+
+      <br>
+
+
+    </div>
+
+  </section>
+</div>
+
+
+
+</body>
+<script>closePopup_top()</script>
+</html>
