@@ -2,20 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "WebWarriors/htmls/index.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "htmls/**/*.html",
+      "src": "WebWorriors/**",
       "use": "@vercel/static"
     }
   ],
   "routes": [
-    { "src": "^/htmls/(.*)", "dest": "/htmls/$1" },
-    { "src": "^/csss/(.*)", "dest": "/csss/$1" },
-    { "src": "^/jss/(.*)", "dest": "/jss/$1" },
-    { "src": "^/img/(.*)", "dest": "/img/$1" },
-    { "src": "^/$", "dest": "/index.html" },
-    { "src": ".*", "dest": "/index.html" }
+    { "src": "^/$", "dest": "/WebWorriors/index.html" },
+    { "src": "^/index.html$", "dest": "/WebWorriors/index.html" },
+    { "src": "^/(htmls|csss|jss|img|img/.*|favicon.ico|index.html)(.*)", "dest": "/WebWorriors/$1$2" },
+    { "src": "^/(.*)$", "dest": "/WebWorriors/$1" }
   ]
 }
