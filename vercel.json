@@ -8,6 +8,9 @@
   ],
   "routes": [
     { "src": "^/$", "dest": "/index.html" },
+    { "src": "^/css/(.*)", "dest": "/csss/$1" },
+    { "src": "^/js/(.*)", "dest": "/jss/$1" },
+    { "src": "^/site.webmanifest$", "dest": "/site.webmanifest" },
     { "src": "^/(.*)$", "dest": "/$1" }
   ]
 }
