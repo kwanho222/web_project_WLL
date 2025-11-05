@@ -2,14 +2,12 @@
   "version": 2,
   "builds": [
     {
-      "src": "WebWorriors/**",
+      "src": "**",
       "use": "@vercel/static"
     }
   ],
   "routes": [
-    { "src": "^/$", "dest": "/WebWorriors/index.html" },
-    { "src": "^/index.html$", "dest": "/WebWorriors/index.html" },
-    { "src": "^/(htmls|csss|jss|img|img/.*|favicon.ico|index.html)(.*)", "dest": "/WebWorriors/$1$2" },
-    { "src": "^/(.*)$", "dest": "/WebWorriors/$1" }
+    { "src": "^/$", "dest": "/index.html" },
+    { "src": "^/(.*)$", "dest": "/$1" }
   ]
 }
