@@ -1,0 +1,14 @@
+
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "WebWorriors/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    { "src": "^/$", "dest": "/WebWorriors/index.html" },
+    { "src": "^/(.*)$", "dest": "/WebWorriors/$1" }
+  ]
+}

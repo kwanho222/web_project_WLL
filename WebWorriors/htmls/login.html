@@ -5,6 +5,8 @@
   <title>Login</title>
   <style type="text/css">@import url(../csss/login.css);</style>
   <script src="../jss/main.js"></script>
+  <script src="../jss/firebase.js"></script>
+  <script src="../jss/auth.js"></script>
 </head>
 <body>
 <header class="head">
@@ -16,22 +18,44 @@
   <p class="title">로그인</p>
   <hr>
   <div class="inputs">
-    <p style="margin-right: 230px">아이디</p>
-    <p><input type="text" id="_id" class="input_id2" required placeholder="아이디"></p>
-    <p style="margin-right: 210px">비밀번호</p>
-    <p><input type="password" id="_pwd" class="input_pwd" required placeholder="비밀번호"></p>
-    <p style="margin-right: 170px"><input type="checkbox" style="width: 13px; height: 13px"> 아이디 저장</p>
-    <p><button onclick="login(document.getElementById('_id').value,
-                              document.getElementById('_pwd').value)"
-                              style="border-radius: 10px; color:white; border:none; background-color: blue; width: 280px; height: 40px">로그인</button></p>
-    <p class="find">
-      <a onclick="phonecheck()" href="#">아이디 찾기</a>
-      <a>/</a>
-      <a onclick="phonecheck()" href="#">비밀번호 재설정</a>
-      <a>/</a>
-      <a href="../htmls/register.html">회원가입</a>
-    </p>
+    <form id="loginForm">
+      <p style="margin-right: 230px">아이디</p>
+      <p><input type="text" id="_id" class="input_id2" name="id" required placeholder="아이디"></p>
+      <p style="margin-right: 210px">비밀번호</p>
+      <p><input type="password" id="_pwd" class="input_pwd" name="pwd" required placeholder="비밀번호"></p>
+      <p style="margin-right: 170px"><input type="checkbox" style="width: 13px; height: 13px"> 아이디 저장</p>
+      <p>
+        <button type="submit" id="btnLogin" style="border-radius: 10px; color:white; border:none; background-color: blue; width: 280px; height: 40px">로그인</button>
+      </p>
+      <p class="find">
+        <a onclick="phonecheck()" href="#">아이디 찾기</a>
+        <a>/</a>
+        <a onclick="phonecheck()" href="#">비밀번호 재설정</a>
+        <a>/</a>
+        <a href="../htmls/register.html">회원가입</a>
+      </p>
+    </form>
   </div>
 </section>
+
+<script>
+  // Attach submit listener to login form
+  (function(){
+    const form = document.getElementById('loginForm');
+    if (form) {
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        const id = document.getElementById('_id').value;
+        const pwd = document.getElementById('_pwd').value;
+        // Use Auth.login (email/password) — in this template id is used as email field
+        if (window.Auth && typeof window.Auth.login === 'function') {
+          window.Auth.login(id, pwd).catch(()=>{});
+        } else {
+          console.warn('Auth.login not available');
+        }
+      });
+    }
+  })();
+</script>
 </body>
 </html>

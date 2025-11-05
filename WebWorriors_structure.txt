@@ -1,0 +1,98 @@
+WebWorriors/ (project root)
+
+Files at root:
+  favicon.ico
+  tile.png
+  tile-wide.png
+  site.webmanifest
+  robots.txt
+  package.json
+  package-lock.json
+  LICENSE.txt
+  index.html
+  icon.png
+  humans.txt
+  .htaccess
+  .gitignore
+  .gitattributes
+  .editorconfig
+
+Directories:
+  doc/
+    TOC.md
+    usage.md
+    misc.md
+    js.md
+    html.md
+    faq.md
+    extend.md
+    css.md
+
+  img/
+    appstore.png
+    androidprogramming.png
+    423187811.jpg
+    .gitignore
+    ilust_main.png
+    googleplay.png
+    dot.png
+    js.png
+    KakaoTalk_20231129_205227867.jpg
+    KakaoTalk_20231129_205227867_02.jpg
+    machinelearninganddeeplearning.png
+    search.png
+    services.png
+    score5.PNG
+    right.png
+    modernjavascript.png
+    ml.png
+    logo_main_right.png
+    logo.png
+    left.png
+    slide.jpg
+    slide03.jpg
+    slide02.jpg
+    slide01.jpg
+    score4.PNG
+    whyrefresh.png
+    XL.jpg
+
+  jss/
+    details.js
+    main.js
+
+  csss/
+    bookrot.css
+    details.css
+    login.css
+    todaybest.css
+    star.css
+    provision.css
+    main.css
+
+  htmls/
+    404.html
+    index.html
+    androidprogramming.html
+    bookrot.html
+    details.html
+    login.html
+    machinelearninganddeeplearning.html
+    modernjavascript.html
+    mypage.html
+    noresult.html
+    provision.html
+    register.html
+    servicecenter.html
+    todaybest.html
+    whyrefresh.html
+
+Other files (tooling / root-level docs):
+  README.md (WebWarriors-main README)
+
+Notes:
+- Many HTML files reference assets under `../csss/` and `../jss/` (the project uses `csss` and `jss` folders for styles and scripts).
+- There is a `package.json` / `package-lock.json` present under the project root (may be leftover from packaging tools).
+- I did not include Git internal files/folders in this listing. If you want those included (or a full recursive tree), I can regenerate including `\.git` contents or produce counts per directory.
+
+If you want this exported somewhere else (for example, add to repository, or open the txt in the editor), tell me and I will save/open it accordingly.

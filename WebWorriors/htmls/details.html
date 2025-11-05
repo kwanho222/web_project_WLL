@@ -64,7 +64,7 @@
     }
   </script>
 </head>
-<body>
+<body onload="updateLoginUI()">
 <header>
   <div align="center">
     <nav align="right" class="login">
@@ -92,7 +92,7 @@
           </li>
         </ul>
       </div>
-      <a href="login.html" onclick="mypage()">마이페이지</a>
+  <a href="#" onclick="mypage(); return false;">마이페이지</a>
       <a href="servicecenter.html">고객센터</a>
       <a class="search">
         <input type="text" id="search" required placeholder="찾고싶은 도서 이름을 검색해 보세요">
