@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "htmls/index.html",
+      "src": "WebWarriors/htmls/index.html",
       "use": "@vercel/static"
     },
     {
