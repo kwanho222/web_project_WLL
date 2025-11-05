@@ -4,7 +4,7 @@
   사용법:
     - mypage.html에 이 스크립트를 포함하세요.
     - Firebase가 초기화되어 있으면 Firebase 인증 사용, 아니면 localStorage의 currentUser.id 사용.
-    - 로그인되어 있지 않으면 ../htmls/login.html 로 리다이렉트합니다.
+  - 로그인되어 있지 않으면 /htmls/login.html 로 리다이렉트합니다.
 */
 
 (function(global){
@@ -12,15 +12,15 @@
     // 우선 Firebase auth 확인
     if (global.Firebase && typeof global.Firebase._internal === 'function') {
       const internal = global.Firebase._internal();
-      if (internal && internal.auth && internal.auth.currentUser) {
-        return { uid: internal.auth.currentUser.uid, source: 'firebase' };
+    if (internal && internal.auth && internal.auth.currentUser) {
+      return { uid: internal.auth.currentUser.uid, source: 'firebase' };
       }
     }
 
     // 다음으로 로컬스토리지의 currentUser
     try {
-      const cu = JSON.parse(localStorage.getItem('currentUser'));
-      if (cu && cu.id) return { uid: cu.id, source: 'local' };
+  const cu = JSON.parse(localStorage.getItem('currentUser'));
+  if (cu && cu.id) return { uid: cu.id, source: 'local' };
     } catch (e) {
       // ignore
     }
@@ -49,7 +49,7 @@
     const user = await ensureUser();
     if (!user) {
       // 로그인 필요
-      window.location.href = '../htmls/login.html';
+  window.location.href = '/htmls/login.html';
       return;
     }
 

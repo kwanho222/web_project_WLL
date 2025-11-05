@@ -48,7 +48,7 @@
 
         alert('로그인 성공');
         // redirect to mypage
-        window.location.href = '../htmls/mypage.html';
+            window.location.href = '/htmls/mypage.html';
         return cred;
       } catch (err) {
         console.error('login error', err);
@@ -75,7 +75,7 @@
         if (uid) localStorage.setItem('currentUserUid', uid);
         // store user doc (signUp already tries to store extraData in firebase helper)
         alert('회원가입이 완료되었습니다. 로그인 페이지로 이동합니다.');
-        window.location.href = '../htmls/login.html';
+            window.location.href = '/htmls/login.html';
         return cred;
       } catch (err) {
         console.error('register error', err);

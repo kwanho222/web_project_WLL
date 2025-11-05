@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WISS</title>
 
-  <link rel="stylesheet" href="../csss/star.css">
-  <style type="text/css">@import url("../csss/main.css");</style>
-  <style type="text/css">@import url("../csss/details.css");</style>
+  <link rel="stylesheet" href="/csss/star.css">
+  <style type="text/css">@import url("/csss/main.css");</style>
+  <style type="text/css">@import url("/csss/details.css");</style>
   <style type="text/css">
     .partial {
       height: 1883px; /* Set the initial height */
@@ -52,15 +52,15 @@
     }
 
   </style>
-  <script src="../jss/details.js"></script>
-  <script src="../jss/main.js"></script>
+  <script src="/jss/details.js"></script>
+  <script src="/jss/main.js"></script>
   <script> /*책 표지 호버 효과*/
     function changeImage() {
-      document.getElementById('bookImage').src = '../img/XLback.png'; // Replace 'otherImage.png' with the path to the new image
+  document.getElementById('bookImage').src = '/img/XLback.png'; // Replace 'otherImage.png' with the path to the new image
     }
 
     function restoreImage() {
-      document.getElementById('bookImage').src = '../img/ml.png'; // Restore the original image path
+  document.getElementById('bookImage').src = '/img/ml.png'; // Restore the original image path
     }
   </script>
 </head>
@@ -75,7 +75,7 @@
 <!-- Topbar -->
 <div align="center">
   <nav class="topbar">
-    <a href="index.html"><img src="../img/logo.png" alt="logo"></a>
+  <a href="/htmls/index.html"><img src="/img/logo.png" alt="logo"></a>
     <a href="#" onclick="alert_noimplement()">eBook</a>
     <a onmouseover="popup_best()" onmouseleave="closePopup_top()">베스트</a>
     <div onmouseover="popup_best()" onmouseleave="closePopup_top()" id="popup" style="left: 30%;">
@@ -95,7 +95,7 @@
     <a href="servicecenter.html">고객센터</a>
     <a class="search">
       <input type="text" id="search" required placeholder="찾고싶은 도서 이름을 검색해 보세요">
-      <button onclick="search(document.getElementById('search').value)"><img src="../img/search.png" alt="search">
+  <button onclick="search(document.getElementById('search').value)"><img src="/img/search.png" alt="search">
       </button>
     </a>
   </nav>

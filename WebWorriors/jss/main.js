@@ -37,7 +37,7 @@ function search(title) {
     console.warn('saveSearch attempt error:', e);
   }
 
-  open("../htmls/noresult.html", self)
+  open("/htmls/noresult.html", self)
 }
 
 function load(){
@@ -48,13 +48,13 @@ function load(){
 
 function purchase(s1, s2, s3){
   if(s1.checked){
-    open("../htmls/machinelearninganddeeplearning.html",self)
+  open("/htmls/machinelearninganddeeplearning.html",self)
   }
   if(s2.checked){
-    open("../htmls/modernjavascript.html",self)
+  open("/htmls/modernjavascript.html",self)
   }
   if(s3.checked){
-    open("../htmls/androidprogramming.html",self)
+  open("/htmls/androidprogramming.html",self)
   }
 }
 
@@ -64,10 +64,10 @@ function mypage(){
   
   if (currentUser) {
     // 로그인 상태면 마이페이지로 이동
-    window.location.href = "../htmls/mypage.html";
+  window.location.href = "/htmls/mypage.html";
   } else {
     alert("로그인하셔야합니다")
-    window.location.href = "../htmls/login.html";
+  window.location.href = "/htmls/login.html";
   }
 }
 
@@ -95,7 +95,7 @@ function login(id, pwd) {
     // 로그인 성공 - 현재 로그인 사용자 정보 저장
     localStorage.setItem('currentUser', JSON.stringify(user));
     alert("로그인 성공!");
-    window.location.href = "../htmls/index.html";
+  window.location.href = "/htmls/index.html";
   } else {
     alert("아이디 혹은 비밀번호가 일치하지 않습니다.")
   }
@@ -145,7 +145,7 @@ function register(id, pwd, name, birth, email) {
   localStorage.setItem('users', JSON.stringify(users));
   
   alert("회원가입이 완료되었습니다!");
-  window.location.href = "../htmls/login.html";
+  window.location.href = "/htmls/login.html";
 }
 
 function phonecheck() {
@@ -179,7 +179,7 @@ function checkLogin() {
   if (!currentUser) {
     // 로그인하지 않은 상태면 로그인 페이지로 이동
     alert("로그인이 필요합니다.");
-    window.location.href = "../htmls/login.html";
+  window.location.href = "/htmls/login.html";
   }
 }
 
@@ -215,7 +215,7 @@ function logout() {
       try { localStorage.removeItem('currentUserUid'); } catch(e){}
       alert("로그아웃되었습니다.");
       updateLoginUI();
-      window.location.href = "./index.html";
+      window.location.href = "/index.html";
     })();
   }
 }

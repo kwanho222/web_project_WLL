@@ -17,7 +17,7 @@
   }
 
   function redirectToLogin() {
-    window.location.href = '../htmls/login.html';
+    window.location.href = '/htmls/login.html';
   }
 
   // 실행: DOMContentLoaded에서 onAuthStateChanged 등록
@@ -41,9 +41,9 @@
         clearLocalAuth();
         // 현재 페이지가 로그인 페이지가 아니라면 이동
         const path = window.location.pathname || '';
-        if (!path.endsWith('/htmls/login.html') && !path.endsWith('/login.html')) {
-          redirectToLogin();
-        }
+          if (!path.endsWith('/htmls/login.html') && !path.endsWith('/login.html')) {
+            redirectToLogin();
+          }
       }
     });
   });
